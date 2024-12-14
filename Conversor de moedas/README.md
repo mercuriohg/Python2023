@@ -5,4 +5,4 @@ Aqui temos um projeto bem simples feito por mim. O projeto consiste em pormos os
 
 ## Como funciona?
 
-O projeto consiste em dois arquivos **.py**, [**moeda.py**](urlmoeda.py) e [**conversor.py**](url) 
+O projeto consiste em dois arquivos **.py**, [**moeda.py**](urlgithub.comhttps/mercuriohg/Python2023/blob/main/Conversor%20de%20moedas/moeda.py) e [**conversor.py**](url) 
