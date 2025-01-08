@@ -10,6 +10,7 @@ cp = input("Insira seu CPF: ")
 if len(cp) > 11 or len(cp) < 11:
     print("CPF invalidado!")
     cp = input("Insira novamente seu CPF: ")
+    # Fará com que fique em loop caso cpf esteja com + ou - números que o valor normal se pede
     while len(cp) > 11 or len(cp)<11:
         print("CPF invalidado:")
         cp = input("Insira novamente seu CPF: ")
@@ -20,6 +21,7 @@ if gm.endswith(ultimos_caracteres):
 else:
     print("Gmail inválido!")
     gm = input("Insira um Gmail válido: ")
+    # Fará com que fique em loop caso o gmail escrito não termine com 'gmail.com'.
     while gm.endswith(ultimos_caracteres) == False:
         if gm.endswith(ultimos_caracteres):
              print("Gmail válido!")
@@ -31,7 +33,8 @@ n2 = "s"
 print(f"{n}. {cp}. {gm}")
 while n2 == "s":
     n2 = str(input("Gostaria de fazer mais um cadastro? s[sim] - n[não]: "))
-    if n2== "n":
+    # Enquanto o n2 continuar no s, fará com que o número de usuários cadastrados aumente ainda mais
+    if n2 == "n":
         break
     else:
         cadastro +=1 
@@ -42,6 +45,7 @@ while n2 == "s":
         if len(cp) > 11 or len(cp) < 11:
             print("CPF invalidado!")
             cp = input("Insira novamente seu cpf: ")
+            # Fará com que fique em loop caso cpf esteja com + ou - números que o valor normal se pede
             while len(cp) > 11 or len(cp)<11:
                 print("CPF invalidado:")
                 cp = input("Insira novamente seu cpf: ")
@@ -52,6 +56,7 @@ while n2 == "s":
         else:
             print("Gmail inválido!")
             gm = input("Insira um Gmail válido: ")
+            # Fará com que fique em loop caso o gmail escrito não termine com 'gmail.com'.
             while gm.endswith(ultimos_caracteres) == False:
                 if gm.endswith(ultimos_caracteres):
                     print("Email válido!")
