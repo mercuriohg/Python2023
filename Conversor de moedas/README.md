@@ -9,4 +9,4 @@ O projeto consiste em dois arquivos **.py**, <a href="https://github.com/mercuri
 
 ## ❗ Atenção: 
 
->Como já disse, os dados de cotação das moedas estão desatualizadas, até esse exato momento que faço o repositório, exclamo novamente que é um projeto bem simples e que pretendo continuar a buscar mais aprendizados. Agradeço ao meu Professor Fábio que me trouxe esses conhecimentos em aula e ao Professor Gustavo Guanabara que complementou ainda mais o meu aprendizado.
+>Como já disse, os dados de cotação das moedas estão desatualizadas até esse exato momento que faço o repositório, exclamo novamente que é um projeto bem simples e que pretendo continuar a buscar mais aprendizados. Agradeço ao meu Professor Fábio que me trouxe esses conhecimentos em aula e ao Professor Gustavo Guanabara que complementou ainda mais o meu aprendizado.
