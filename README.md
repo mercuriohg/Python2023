@@ -4,4 +4,6 @@
  
 
 # O que aprendemos?
-Aprendemos o básico de Python onde se pode ver no repositório sobre do Beecrowd <a href=""><PASTA></a>
+Aprendemos o básico de Python onde se pode ver no repositório sobre do Beecrowd de 2023 <a href="https://github.com/mercuriohg/beecrowd23-24/tree/main/2023">*(CONTEÚDO)*</a>. 
+
+>Aprendi mais por fora do que com o próprio curso, mas é uma ótima complementação.
