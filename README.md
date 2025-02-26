@@ -4,3 +4,4 @@
  
 
 # O que aprendemos?
+Aprendemos o básico de Python onde se pode ver no repositório sobre do Beecrowd <a href=""><PASTA></a>
