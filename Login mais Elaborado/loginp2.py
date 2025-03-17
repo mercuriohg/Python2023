@@ -1,5 +1,3 @@
-''
-
 def nome(person):
     name = str(input("Insira seu nome: "))
     person.append(name)
@@ -65,8 +63,6 @@ def main():
     # Printa o registro final em 3 em 3
     dividir_lista(person)
     print('===============================')
-
     
 if __name__ == '__main__':
     main()
-
