@@ -2,12 +2,14 @@ def alunosCadastro(alunos, aluno): # Função para cadastrar alunos
     alunos.append(aluno)
     
      
-    
-def main(): # Main para adicionar os alunos no dict e lista 
+def cadastroSistema(alunos): # Main para adicionar os alunos no dict e lista 
+    print("============Sistema de Notas=============")
     while True:
         try: 
             quantAlunos = int(input("Quantos alunos existem na sala? "))
-            alunos = []
+            if quantAlunos <= 0:
+                print("Valor inválido.")
+                continue
             num_id = 0
             
             for i in range(quantAlunos):
@@ -25,7 +27,7 @@ def main(): # Main para adicionar os alunos no dict e lista
                 media_aluno = sum(notas_aluno) / 3
                 if media_aluno < 7:
                     apr = "Reprovado"
-                elif 6 <= media_aluno <= 6.9:
+                elif 6 <= media_aluno < 7:
                     apr = "Recuperação"
                 else:
                     apr = "Aprovado"
@@ -36,17 +38,60 @@ def main(): # Main para adicionar os alunos no dict e lista
                     "notas": notas_aluno,
                     "media": media_aluno,
                     "situacao" : apr
-                }
+                }   
                 
                 
                 alunosCadastro(alunos, aluno)
-            print("============Lista de Alunos============")
-            for a in alunos:
-               print(a)
-
+                
+            print("Aluno(os) cadastrado(os)...")
             break
+            
         except ValueError:
             print("Valor inválido. Tente novamente.")
+def listarAluno(alunos):
+    print("=======Lista de alunos=======")
+    if not alunos:
+        print("Nenhum aluno cadastrado.")
+    else:
+        for a in alunos:
+            print(a)
+def buscaPorNome(alunos):
+    nome_busca = input("Digite o nome do aluno para buscar: ").strip().lower()
+    encontrado = False
+
+    for aluno in alunos:
+        if aluno["nome"].lower() == nome_busca:
+            print("Aluno encontrado:")
+            print(aluno)
+            encontrado = True
+
+    if not encontrado:
+        print("Aluno não encontrado.")
+def main():
+    alunos = []
+    while True:
+     try:
+        print("""=========Menu=========
+1-Cadastrar
+2-Listar
+3-Buscar por nome
+4-Sair""")
+        menu = int(input("Escolha a ação: "))
+        if menu < 1 or  menu > 4:
+            print("Não existe no menu")
+            continue
+        if menu == 1:
+            cadastroSistema(alunos)
+        elif menu == 2:
+            listarAluno(alunos)
+        elif menu == 3:
+            buscaPorNome(alunos)
+        elif menu == 4:
+            print("Saindo do Sistema...")
+            break       
+     except ValueError:
+        print("Valor errado.")
+
 
 if __name__ == "__main__": # Chamando o Main para rodar o código
     main()
