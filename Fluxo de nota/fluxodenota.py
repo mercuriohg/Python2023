@@ -10,7 +10,7 @@ def cadastroSistema(alunos): # Main para adicionar os alunos no dict e lista
             if quantAlunos <= 0:
                 print("Valor inválido.")
                 continue
-            num_id = 0
+            num_id = len(alunos)
             
             for i in range(quantAlunos):
                 num_id += 1
