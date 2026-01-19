@@ -67,6 +67,25 @@ def buscaPorNome(alunos):
 
     if not encontrado:
         print("Aluno não encontrado.")
+def removerAluno(alunos):
+    try:
+        nome_remover = str(input("Digite o nome de quem deseja remover: ")).strip().lower()
+        encontrado = True
+        for i, aluno in enumerate(alunos):
+            if aluno["nome"].lower() == nome_remover:
+                alunos.pop(i)
+                removido = True
+                print("Aluno removido com sucesso!")
+                break
+
+        if not encontrado:
+            print("Aluno não encontrado.")
+            return
+        # Reorganiza os id's em ordem
+        for idx, aluno in enumerate(alunos, start=1):
+            aluno["id"] = idx
+    except ValueError:
+        print('O resultado esperado é uma [string]')
 def main():
     alunos = []
     while True:
@@ -75,9 +94,10 @@ def main():
 1-Cadastrar
 2-Listar
 3-Buscar por nome
-4-Sair""")
+4-Remover
+5-Sair""")
         menu = int(input("Escolha a ação: "))
-        if menu < 1 or  menu > 4:
+        if menu < 1 or  menu > 5:
             print("Não existe no menu")
             continue
         if menu == 1:
@@ -87,6 +107,8 @@ def main():
         elif menu == 3:
             buscaPorNome(alunos)
         elif menu == 4:
+            removerAluno(alunos)
+        elif menu == 5:
             print("Saindo do Sistema...")
             break       
      except ValueError:
