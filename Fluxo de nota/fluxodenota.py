@@ -25,7 +25,7 @@ def cadastroSistema(alunos): # Main para adicionar os alunos no dict e lista
                     else:
                         print("Nota inválida.")
                 media_aluno = sum(notas_aluno) / 3
-                if media_aluno < 7:
+                if media_aluno < 6:
                     apr = "Reprovado"
                 elif 6 <= media_aluno < 7:
                     apr = "Recuperação"
