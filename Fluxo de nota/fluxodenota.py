@@ -105,7 +105,7 @@ def main():
         elif menu == 2:
             listarAluno(alunos)
         elif menu == 3:
-            buscaPorNome(alunos)
+            buscaPorNome(alunos)    
         elif menu == 4:
             removerAluno(alunos)
         elif menu == 5:
